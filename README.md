@@ -27,12 +27,11 @@ Full-stack inventory management system: Node.js/Express + MongoDB (Mongoose) API
 
 ## Backend setup
 ```bash
-npm install
-cp .env.example .env   # fill in MONGODB_URI and JWT_SECRET
+npm install  
 node Scripts/seedAdmin.js   # creates the first superadmin (see .env for credentials)
 npm run dev
 ```
-API runs on `http://localhost:5000` by default. `/health` returns `{ status: "ok" }` once it's up.
+API runs on `http://localhost:8000` by default. `/health` returns `{ status: "ok" }` once it's up.
 
 `/users/createuser` requires an existing superadmin token — after seeding, log in as the seeded admin and use that endpoint to create the rest of your team with the appropriate roles.
 
